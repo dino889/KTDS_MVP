@@ -12,6 +12,7 @@ from azure.core.credentials import AzureKeyCredential
 from azure.search.documents.models import VectorizedQuery
 import logging
 from datetime import datetime
+import math
 
 # 환경 변수 로드
 load_dotenv()
@@ -68,7 +69,7 @@ class KOSOrderSystem:
         # JSON Output Parser 설정
         self.parser = JsonOutputParser(pydantic_object=SQLQuery)
         
-    def search_relevant_tables(self, user_query: str, top_k: int = 5, use_vector_search: bool = True) -> List[dict]:
+    def search_relevant_tables(self, user_query: str, top_k: int = 10, use_vector_search: bool = True) -> List[dict]:
         """사용자 쿼리와 관련된 테이블 정보를 Azure AI Search에서 검색"""
         try:
             if use_vector_search:
@@ -253,6 +254,12 @@ def init_session_state():
         st.session_state.trigger_sql_generation = False
     if 'table_selection_state' not in st.session_state:
         st.session_state.table_selection_state = None
+    if 'current_page' not in st.session_state:
+        st.session_state.current_page = {}
+    if 'skip_join_condition' not in st.session_state:
+        st.session_state.skip_join_condition = False
+    if 'session_to_delete' not in st.session_state:
+        st.session_state.session_to_delete = None
 
 def save_current_session():
     """현재 세션을 저장"""
@@ -283,6 +290,35 @@ def display_chat_history():
                     # 테이블 선택 UI 표시
                     st.write(message["content"])
                     
+                    # 페이징 처리
+                    tables = message["tables"]
+                    total_tables = len(tables)
+                    tables_per_page = 10
+                    total_pages = math.ceil(total_tables / tables_per_page)
+                    
+                    if idx not in st.session_state.current_page:
+                        st.session_state.current_page[idx] = 0
+                    
+                    current_page = st.session_state.current_page[idx]
+                    start_idx = current_page * tables_per_page
+                    end_idx = min(start_idx + tables_per_page, total_tables)
+                    
+                    # 페이지 네비게이션
+                    if total_pages > 1:
+                        col1, col2, col3 = st.columns([1, 2, 1])
+                        with col1:
+                            if current_page > 0:
+                                if st.button("◀ 이전", key=f"prev_{idx}"):
+                                    st.session_state.current_page[idx] -= 1
+                                    st.rerun()
+                        with col2:
+                            st.write(f"페이지 {current_page + 1} / {total_pages}")
+                        with col3:
+                            if current_page < total_pages - 1:
+                                if st.button("다음 ▶", key=f"next_{idx}"):
+                                    st.session_state.current_page[idx] += 1
+                                    st.rerun()
+                    
                     # 테이블 선택 폼
                     with st.form(key=f"table_form_{idx}"):
                         st.write("### 📋 사용할 테이블을 선택하세요:")
@@ -296,18 +332,17 @@ def display_chat_history():
                             if st.form_submit_button("전체 해제", use_container_width=True):
                                 st.session_state.table_selection_state = "none"
                         
-                        # 테이블 목록
+                        # 현재 페이지의 테이블 목록
                         selected_indices = []
-                        for i, table in enumerate(message["tables"]):
+                        for i in range(start_idx, end_idx):
+                            table = tables[i]
                             col1, col2 = st.columns([1, 4])
                             with col1:
-                                # 전체 선택/해제 상태 확인
-                                default_value = True
+                                # 전체 선택/해제 상태 확인 - 기본값은 False (전체 해제)
+                                default_value = False
                                 if hasattr(st.session_state, 'table_selection_state'):
                                     if st.session_state.table_selection_state == "all":
                                         default_value = True
-                                    elif st.session_state.table_selection_state == "none":
-                                        default_value = False
                                 
                                 is_selected = st.checkbox(
                                     label="선택",
@@ -325,8 +360,8 @@ def display_chat_history():
                         if submitted:
                             # 선택된 테이블만 추출
                             st.session_state.selected_tables = [
-                                message["tables"][i] for i in selected_indices
-                            ] if selected_indices else message["tables"]
+                                tables[i] for i in selected_indices
+                            ] if selected_indices else tables
                             
                             # 현재 메시지를 비활성화
                             message["is_active"] = False
@@ -335,11 +370,14 @@ def display_chat_history():
                             st.session_state.trigger_sql_generation = True
                             # SQL 생성 프로세스 시작
                             st.rerun()
+                    
+                    # 검색 결과 개선 안내
+                    st.info("💡 원하는 결과가 나오지 않은 경우 좌측 '검색할 테이블 수'를 늘려서 검색해보세요.")
+                    
                 elif "table_selection" in message and not message.get("is_active", False):
                     # 비활성화된 테이블 선택 UI는 텍스트만 표시
                     st.write(message["content"])
                     st.info("✅ 테이블 선택 완료")
-                            
                 elif "sql_query" in message:
                     st.write(message["content"])
                     st.code(message["sql_query"], language="sql")
@@ -365,6 +403,25 @@ def main():
     # 세션 상태 초기화
     init_session_state()
     
+    # 삭제 확인 대화상자
+    if st.session_state.session_to_delete:
+        @st.dialog("채팅 삭제 확인")
+        def confirm_delete():
+            st.warning("⚠️ 이 채팅을 삭제하시겠습니까? 삭제 후에는 되돌릴 수 없습니다.")
+            col1, col2 = st.columns(2)
+            with col1:
+                if st.button("삭제", type="primary", use_container_width=True):
+                    # 세션 삭제
+                    del st.session_state.chat_sessions[st.session_state.session_to_delete]
+                    st.session_state.session_to_delete = None
+                    st.rerun()
+            with col2:
+                if st.button("취소", use_container_width=True):
+                    st.session_state.session_to_delete = None
+                    st.rerun()
+        
+        confirm_delete()
+    
     # 사이드바 설정
     with st.sidebar:
         # 1. 사용 가능한 도메인 (최상단)
@@ -381,7 +438,7 @@ def main():
         
         # 2. 설정
         st.header("⚙️ 설정")
-        top_k = st.slider("검색할 테이블 수", min_value=1, max_value=20, value=10)
+        top_k = st.slider("검색할 테이블 수", min_value=1, max_value=50, value=10, step=5)
         use_text_search = st.checkbox("텍스트 검색 사용", value=False)
         use_vector_search = not use_text_search  # 벡터 검색이 기본값
         
@@ -410,6 +467,7 @@ def main():
             st.session_state.waiting_for_join = False
             st.session_state.searched_tables = []
             st.session_state.selected_tables = []
+            st.session_state.table_selection_state = None  # 초기화
             st.rerun()
         
         # 저장된 세션 목록
@@ -421,14 +479,20 @@ def main():
                 reverse=True
             ):
                 timestamp = session_data['timestamp'].strftime("%m/%d %H:%M")
-                if st.button(
-                    f"📝 {timestamp} - {session_data['title']}", 
-                    key=f"session_{session_id}",
-                    use_container_width=True
-                ):
-                    save_current_session()
-                    load_session(session_id)
-                    st.rerun()
+                col1, col2 = st.columns([3, 1])
+                with col1:
+                    if st.button(
+                        f"📝 {timestamp} - {session_data['title']}", 
+                        key=f"session_{session_id}",
+                        use_container_width=True
+                    ):
+                        save_current_session()
+                        load_session(session_id)
+                        st.rerun()
+                with col2:
+                    if st.button("🗑️", key=f"delete_{session_id}"):
+                        st.session_state.session_to_delete = session_id
+                        st.rerun()
         else:
             st.caption("저장된 대화가 없습니다.")
 
@@ -459,7 +523,8 @@ def main():
                             for table in result.tables:
                                 response_text += f"- {table.owner}.{table.table_name}\n"
                             response_text += "\n테이블 간의 JOIN 조건을 입력해주세요. "
-                            response_text += "(예: T1.CUST_ID = T2.CUST_ID)"
+                            response_text += "(예: T1.CUST_ID = T2.CUST_ID)\n\n"
+                            response_text += "⚠️ **JOIN 조건을 입력하지 않으면 첫 번째 테이블만 사용하여 쿼리를 생성합니다.**"
                             
                             st.write(response_text)
                             st.session_state.messages.append({
@@ -496,7 +561,7 @@ def main():
         
         # JOIN 조건 대기 중인 경우
         if st.session_state.waiting_for_join:
-            st.info("🔗 여러 테이블을 사용하는 쿼리입니다. JOIN 조건을 입력해주세요.")
+            st.info("🔗 여러 테이블을 사용하는 쿼리입니다. JOIN 조건을 입력하거나 Enter를 눌러 첫 번째 테이블만 사용하세요.")
     
     # 사용자 입력 처리
     if user_input := st.chat_input("질문을 입력하세요..."):
@@ -511,51 +576,94 @@ def main():
             # 어시스턴트 응답
             with st.chat_message("assistant"):
                 if st.session_state.waiting_for_join:
-                    # JOIN 조건으로 처리
-                    with st.spinner("JOIN 조건을 적용하여 SQL을 재생성하는 중..."):
-                        try:
-                            # 이전 사용자 쿼리 찾기
-                            original_query = st.session_state.pending_query
-                            
-                            # SQL 재생성
-                            result = st.session_state.kos_system.generate_sql_query(
-                                original_query,
-                                st.session_state.selected_tables,
-                                conversation_history=st.session_state.messages[:-1],
-                                join_conditions=user_input
-                            )
-                            
-                            # 응답 표시
-                            response_text = f"JOIN 조건을 적용하여 SQL을 생성했습니다.\n\n"
-                            response_text += f"**사용자 의도:** {result.user_intent}\n\n"
-                            response_text += f"**쿼리 설명:** {result.explanation}"
-                            
-                            st.write(response_text)
-                            st.code(result.sql_query, language="sql")
-                            
-                            # 메시지 저장
-                            st.session_state.messages.append({
-                                "role": "assistant",
-                                "content": response_text,
-                                "sql_query": result.sql_query
-                            })
-                            
-                            st.session_state.waiting_for_join = False
-                            
-                        except Exception as e:
-                            error_msg = f"SQL 생성 중 오류가 발생했습니다: {str(e)}"
-                            st.error(error_msg)
-                            st.session_state.messages.append({
-                                "role": "assistant",
-                                "content": error_msg
-                            })
+                    # JOIN 조건으로 처리 또는 첫 번째 테이블만 사용
+                    if user_input.strip() == "":
+                        # 빈 입력인 경우 첫 번째 테이블만 사용
+                        with st.spinner("첫 번째 테이블만 사용하여 SQL을 생성하는 중..."):
+                            try:
+                                # 첫 번째 테이블만 선택
+                                first_table_only = [st.session_state.selected_tables[0]]
+                                
+                                # SQL 생성
+                                result = st.session_state.kos_system.generate_sql_query(
+                                    st.session_state.pending_query,
+                                    first_table_only,
+                                    conversation_history=st.session_state.messages[:-1]
+                                )
+                                
+                                # 응답 표시
+                                response_text = f"첫 번째 테이블만 사용하여 SQL을 생성했습니다.\n\n"
+                                response_text += f"**사용자 의도:** {result.user_intent}\n\n"
+                                response_text += f"**쿼리 설명:** {result.explanation}"
+                                
+                                st.write(response_text)
+                                st.code(result.sql_query, language="sql")
+                                
+                                # 메시지 저장
+                                st.session_state.messages.append({
+                                    "role": "assistant",
+                                    "content": response_text,
+                                    "sql_query": result.sql_query
+                                })
+                                
+                                st.session_state.waiting_for_join = False
+                                
+                            except Exception as e:
+                                error_msg = f"SQL 생성 중 오류가 발생했습니다: {str(e)}"
+                                st.error(error_msg)
+                                st.session_state.messages.append({
+                                    "role": "assistant",
+                                    "content": error_msg
+                                })
+                    else:
+                        # JOIN 조건이 입력된 경우
+                        with st.spinner("JOIN 조건을 적용하여 SQL을 재생성하는 중..."):
+                            try:
+                                # 이전 사용자 쿼리 찾기
+                                original_query = st.session_state.pending_query
+                                
+                                # SQL 재생성
+                                result = st.session_state.kos_system.generate_sql_query(
+                                    original_query,
+                                    st.session_state.selected_tables,
+                                    conversation_history=st.session_state.messages[:-1],
+                                    join_conditions=user_input
+                                )
+                                
+                                # 응답 표시
+                                response_text = f"JOIN 조건을 적용하여 SQL을 생성했습니다.\n\n"
+                                response_text += f"**사용자 의도:** {result.user_intent}\n\n"
+                                response_text += f"**쿼리 설명:** {result.explanation}"
+                                
+                                st.write(response_text)
+                                st.code(result.sql_query, language="sql")
+                                
+                                # 메시지 저장
+                                st.session_state.messages.append({
+                                    "role": "assistant",
+                                    "content": response_text,
+                                    "sql_query": result.sql_query
+                                })
+                                
+                                st.session_state.waiting_for_join = False
+                                
+                            except Exception as e:
+                                error_msg = f"SQL 생성 중 오류가 발생했습니다: {str(e)}"
+                                st.error(error_msg)
+                                st.session_state.messages.append({
+                                    "role": "assistant",
+                                    "content": error_msg
+                                })
                 
                 else:
                     # 일반 쿼리 처리
+                    # 테이블 선택 상태 초기화 (새 질문마다 초기화)
+                    st.session_state.table_selection_state = None
+                    
                     with st.spinner("관련 테이블을 검색하는 중..."):
                         # 설정값 가져오기
                         settings = st.session_state.get('search_settings', {
-                            'top_k': 5,
+                            'top_k': 10,
                             'use_vector_search': True
                         })
                         
