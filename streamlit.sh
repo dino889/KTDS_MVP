@@ -1,14 +1,14 @@
-# 가상환경에서 나가기
-deactivate
+# # 가상환경에서 나가기
+# deactivate
 
-# 가상환경 삭제 (Windows)
-rmdir /s venv
+# # 가상환경 삭제 (Windows)
+# rmdir /s venv
 
-# 가상환경 재생성
-python -m venv venv
+# # 가상환경 재생성
+# python -m venv venv
 
-# 가상환경 활성화
-venv\Scripts\activate
+# # 가상환경 활성화
+# venv\Scripts\activate
 
 # pip 업그레이드
 python -m pip install --upgrade pip
