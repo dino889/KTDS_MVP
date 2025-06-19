@@ -1,0 +1,1 @@
+python -m streamlit run kos_sql_generator.py --server.port 8000 --server.address 0.0.0.0 --server.headless true --browser.serverAddress 0.0.0.0 --server.enableCORS false --server.enableXsrfProtection false
