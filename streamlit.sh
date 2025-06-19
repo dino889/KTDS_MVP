@@ -1,29 +1,23 @@
-# # 가상환경에서 나가기
-# deactivate
+#!/bin/bash
 
-# # 가상환경 삭제 (Windows)
-# rmdir /s venv
-
-# # 가상환경 재생성
-# python -m venv venv
-
-# # 가상환경 활성화
-# venv\Scripts\activate
+# Azure Web App 환경에서 실행되는 스크립트
 
 # pip 업그레이드
 python -m pip install --upgrade pip
 
-# 캐시 없이 패키지 설치
-# pip install --no-cache-dir -r requirements.txt
+# 의존성 설치 (이미 빌드 단계에서 설치되었을 수 있음)
+if [ ! -d "/home/site/wwwroot/.venv" ]; then
+    echo "Installing dependencies..."
+    pip install -r requirements.txt
+fi
 
-pip install streamlit==1.31.0
-pip install pydantic==2.5.3
-pip install langchain==0.2.11
-pip install langchain-openai==0.1.17
-pip install langchain-core==0.2.23
-pip install azure-search-documents==11.4.0
-pip install python-dotenv==1.0.0
-## 실행과 동시에 수행, 설치 되어야하는 대상들 전부 다 작성 필요
-
-python -m streamlit azure_connection_test.py
-python -m streamlit run kos_sql_generator.py --server.port 8000 --server.address 0.0.0.0
+# Streamlit 앱 실행
+# Azure Web App은 PORT 환경 변수를 제공합니다
+PORT=${PORT:-8000}
+python -m streamlit run kos_sql_generator.py \
+    --server.port $PORT \
+    --server.address 0.0.0.0 \
+    --server.headless true \
+    --browser.serverAddress 0.0.0.0 \
+    --server.enableCORS false \
+    --server.enableXsrfProtection false
