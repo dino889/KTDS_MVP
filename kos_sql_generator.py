@@ -349,6 +349,8 @@ def init_session_state():
         st.session_state.show_columns_for = None
     if 'show_columns_table' not in st.session_state:
         st.session_state.show_columns_table = None
+    if 'last_generated_sql' not in st.session_state:
+        st.session_state.last_generated_sql = None
 
 def save_current_session():
     """현재 세션을 저장"""
