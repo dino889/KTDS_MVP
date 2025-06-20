@@ -1,4 +1,4 @@
-# KOS SQL Generator System
+# [KOS SQL Generator System](https://jiwooo-web-001.azurewebsites.net/)
 
 자연어로 SQL을 생성하고, Azure AI 기반 벡터 검색 및 LangChain을 활용한 인터랙션이 가능한 Streamlit 애플리케이션입니다. 이 애플리케이션은 Azure OpenAI, Azure Cognitive Search, LangChain을 기반으로 사용자의 의도를 분석하고, 자동으로 SQL 쿼리를 생성합니다.
 
