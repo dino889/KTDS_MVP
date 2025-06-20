@@ -157,6 +157,10 @@ class KOSOrderSystem:
                           modification_request: str = None) -> SQLQuery:
         """사용자 쿼리와 관련 테이블 정보를 바탕으로 SQL 쿼리 생성"""
         
+        # 받은 테이블 정보 로깅
+        logger.info(f"generate_sql_query - 받은 테이블 수: {len(relevant_tables)}")
+        logger.info(f"generate_sql_query - 받은 테이블 목록: {[t.get('table_name', 'Unknown') for t in relevant_tables]}")
+        
         # 대화 히스토리 포맷팅
         history_context = ""
         if conversation_history:
@@ -221,18 +225,20 @@ class KOSOrderSystem:
                 
                 다음 지침을 따라주세요:
                 1. 사용자의 의도를 명확하게 파악하고 정리하세요.
-                2. 제공된 테이블 정보를 분석하여 필요한 테이블과 컬럼을 선택하세요.
-                3. 여러 테이블을 사용할 경우, 테이블 간 JOIN이 필요한지 판단하세요.
-                4. JOIN 조건이 제공되지 않았고 필요한 경우, requires_join_condition을 true로 설정하세요.
-                5. Oracle SQL 문법을 사용하세요.
-                6. 쿼리는 읽기 쉽게 포맷팅하세요.
-                7. 날짜 조건은 TO_DATE 함수를 사용하세요.
-                8. 이전 대화 내용을 참고하여 맥락을 이해하세요.
-                9. 모든 쿼리에 ROWNUM <= 10 조건을 추가해주세요.
-                10. 쿼리 설명 시 KORNET 관련 테이블은 인터넷으로 설명, TV 또는 IPTV는 IPTV로 설명해주세요.
-                11. 상품명, 상품 ID(e.g. 0V1201)이 포함된 경우 상품 기본(PR_PROD_BAS) 테이블을 참조하세요.
-                12. 어떤 컬럼을 조회해달라는 명시가 없으면 SELECT * 로 표시해주세요.
-                13. 쿼리 생성 후, 사용자가 이해할 수 있도록 쿼리에 대한 설명을 작성해주세요. 
+                2. **중요**: 사용자가 선택한 모든 테이블을 반드시 활용해야 합니다. 제공된 테이블 중 일부만 사용하지 마세요.
+                3. 제공된 테이블 정보를 분석하여 필요한 테이블과 컬럼을 선택하세요.
+                4. 여러 테이블을 사용할 경우, 테이블 간 JOIN이 필요한지 판단하세요.
+                5. JOIN 조건이 제공되지 않았고 필요한 경우, requires_join_condition을 true로 설정하세요.
+                6. Oracle SQL 문법을 사용하세요.
+                7. 쿼리는 읽기 쉽게 포맷팅하세요.
+                8. 날짜 조건은 TO_DATE 함수를 사용하세요.
+                9. 이전 대화 내용을 참고하여 맥락을 이해하세요.
+                10. 모든 쿼리에 ROWNUM <= 10 조건을 추가해주세요.
+                11. 쿼리 설명 시 KORNET 관련 테이블은 인터넷으로 설명, TV 또는 IPTV는 IPTV로 설명해주세요.
+                12. 상품명, 상품 ID(e.g. 0V1201)이 포함된 경우 상품 기본(PR_PROD_BAS) 테이블을 참조하세요.
+                13. 어떤 컬럼을 조회해달라는 명시가 없으면 SELECT * 로 표시해주세요.
+                14. 쿼리 생성 후, 사용자가 이해할 수 있도록 쿼리에 대한 설명을 작성해주세요.
+                15. **필수**: tables 배열에는 제공된 모든 테이블 정보를 포함해야 합니다.
                 
                 
                 {format_instructions}"""),
@@ -240,12 +246,12 @@ class KOSOrderSystem:
                 
                 {history_context}
                 
-                사용 가능한 테이블 정보:
+                사용자가 선택한 테이블 정보 (총 {table_count}개):
                 {tables_info}
                 
                 {join_context}
                 
-                위 정보를 바탕으로 SQL 쿼리를 생성해주세요.""")
+                위 {table_count}개의 테이블을 모두 활용하여 SQL 쿼리를 생성해주세요.""")
             ])
             
             # 테이블 정보 포맷팅
@@ -264,6 +270,7 @@ class KOSOrderSystem:
                     "user_query": user_query,
                     "history_context": history_context,
                     "tables_info": tables_info_str,
+                    "table_count": len(relevant_tables),
                     "join_context": join_context,
                     "format_instructions": self.parser.get_format_instructions()
                 })
@@ -277,7 +284,10 @@ class KOSOrderSystem:
     def _format_tables_info(self, tables: List[dict]) -> str:
         """테이블 정보를 읽기 쉬운 형식으로 포맷팅"""
         formatted = []
-        for table in tables:
+        logger.info(f"_format_tables_info - 포맷팅할 테이블 수: {len(tables)}")
+        
+        for idx, table in enumerate(tables):
+            logger.info(f"테이블 {idx + 1}: {table.get('owner', 'N/A')}.{table.get('table_name', 'N/A')}")
             table_str = f"소유자: {table.get('owner', 'N/A')}\n"
             table_str += f"테이블명: {table.get('table_name', 'N/A')}\n"
             table_str += f"설명: {table.get('table_comment', 'N/A')}\n"
@@ -296,6 +306,10 @@ class KOSOrderSystem:
 
 def toggle_table_selection(msg_idx, table_idx):
     """테이블 선택 상태 토글"""
+    # 메시지 인덱스별 선택 상태 초기화
+    if msg_idx not in st.session_state.selected_table_indices:
+        st.session_state.selected_table_indices[msg_idx] = set()
+    
     key = f"table_check_{msg_idx}_{table_idx}"
     if key in st.session_state:
         if st.session_state[key]:
@@ -489,11 +503,26 @@ def display_chat_history():
                             st.rerun()
                         
                         if submitted:
-                            # 폼 제출 시 체크박스 상태는 이미 on_change로 처리됨
-                            # 선택된 테이블만 추출
-                            selected_indices = list(st.session_state.selected_table_indices[idx])
+                            # 선택된 테이블 인덱스 가져오기
+                            if idx not in st.session_state.selected_table_indices:
+                                st.session_state.selected_table_indices[idx] = set()
+                            
+                            # 현재 체크박스 상태를 확인하여 선택된 인덱스 업데이트
+                            selected_indices = []
+                            for i in range(len(tables)):
+                                key = f"table_check_{idx}_{i}"
+                                if key in st.session_state and st.session_state[key]:
+                                    selected_indices.append(i)
+                            
+                            # 선택된 인덱스가 없는 경우 selected_table_indices에서도 확인
+                            if not selected_indices and idx in st.session_state.selected_table_indices:
+                                selected_indices = list(st.session_state.selected_table_indices[idx])
+                            
                             if selected_indices:
-                                st.session_state.selected_tables = [tables[i] for i in selected_indices]
+                                st.session_state.selected_tables = [tables[i] for i in sorted(selected_indices)]
+                                # 디버깅을 위한 로그
+                                logger.info(f"선택된 테이블 수: {len(st.session_state.selected_tables)}")
+                                logger.info(f"선택된 테이블: {[t['table_name'] for t in st.session_state.selected_tables]}")
                             else:
                                 st.error("최소 하나 이상의 테이블을 선택해주세요.")
                                 st.stop()
@@ -582,35 +611,53 @@ def main():
         # 2. 설정
         st.header("⚙️ 설정")
         
+
         # 검색할 테이블 수 입력
         col1, col2 = st.columns([2, 1])
+        
+        # 기본값 리셋 처리
+        if 'reset_to_defaults' in st.session_state and st.session_state.reset_to_defaults:
+            # 검색할 테이블 수와 검색 방식 모두 기본값으로 설정
+            st.session_state.search_settings = {
+                'top_k': 10,
+                'use_vector_search': True
+            }
+            del st.session_state.reset_to_defaults
+            default_top_k = 10
+            default_search_method = "벡터 검색"
+        else:
+            # 저장된 설정값이 있으면 사용, 없으면 기본값
+            if 'search_settings' in st.session_state:
+                default_top_k = st.session_state.search_settings.get('top_k', 10)
+                default_search_method = "벡터 검색" if st.session_state.search_settings.get('use_vector_search', True) else "텍스트 검색"
+            else:
+                default_top_k = 10
+                default_search_method = "벡터 검색"
+        
         with col1:
             top_k = st.number_input(
                 "검색할 테이블 수", 
                 min_value=1, 
                 max_value=100, 
-                value=10, 
+                value=default_top_k, 
                 step=5,
-                help="1~100 사이의 값을 입력하세요"
+                help="1~100 사이의 값을 입력하세요",
+                key="top_k_input"
             )
         with col2:
             st.write("")  # 빈 공간
             st.write("")  # 정렬을 위한 빈 공간
             if st.button("기본값", use_container_width=True):
-                st.session_state['reset_top_k'] = True
+                st.session_state['reset_to_defaults'] = True
                 st.rerun()
-        
-        # 기본값 리셋 처리
-        if 'reset_top_k' in st.session_state and st.session_state.reset_top_k:
-            top_k = 10
-            del st.session_state.reset_top_k
         
         # 검색 방식 선택 (라디오 버튼)
         search_method = st.radio(
             "검색 방식",
             ["벡터 검색", "텍스트 검색"],
-            index=0,  # 기본값: 벡터 검색
-            help="벡터 검색: 의미 기반 검색\n텍스트 검색: 키워드 기반 검색"
+            index=0 if default_search_method == "벡터 검색" else 1,
+            help="벡터 검색: 의미 기반 검색\n텍스트 검색: 키워드 기반 검색",
+            key="search_method_radio"
         )
         
         use_vector_search = (search_method == "벡터 검색")
@@ -774,6 +821,10 @@ def main():
             with st.chat_message("assistant"):
                 with st.spinner("선택한 테이블로 SQL을 생성하는 중..."):
                     try:
+                        # SQL 생성 전 선택된 테이블 로깅
+                        logger.info(f"SQL 생성 직전 - 선택된 테이블 수: {len(st.session_state.selected_tables)}")
+                        logger.info(f"SQL 생성 직전 - 선택된 테이블: {[t['table_name'] for t in st.session_state.selected_tables]}")
+                        
                         result = st.session_state.kos_system.generate_sql_query(
                             st.session_state.pending_query,
                             st.session_state.selected_tables,
@@ -791,7 +842,7 @@ def main():
                                 response_text += f"- {table.owner}.{table.table_name}\n"
                             response_text += "\n테이블 간의 JOIN 조건을 입력해주세요. "
                             response_text += "(예: T1.CUST_ID = T2.CUST_ID)\n\n"
-                            response_text += "⚠️ **JOIN 조건을 입력하지 않으면 첫 번째 테이블만 사용하여 쿼리를 생성합니다.**"
+                            response_text += "⚠️ **JOIN 조건 없이 첫 번째 테이블만 사용하려면 점(.)을 입력하세요.**"
                             
                             st.write(response_text)
                             st.session_state.messages.append({
@@ -829,7 +880,7 @@ def main():
         
         # JOIN 조건 대기 중인 경우
         if st.session_state.waiting_for_join:
-            st.info("🔗 여러 테이블을 사용하는 쿼리입니다. JOIN 조건을 입력하거나 Enter를 눌러 첫 번째 테이블만 사용하세요.")
+            st.info("🔗 여러 테이블을 사용하는 쿼리입니다. JOIN 조건을 입력하거나 점(.)을 입력하여 첫 번째 테이블만 사용하세요.")
     
     # 사용자 입력 영역
     with st.container():
@@ -877,8 +928,8 @@ def main():
                     with st.chat_message("assistant"):
                         if st.session_state.waiting_for_join:
                             # JOIN 조건으로 처리 또는 첫 번째 테이블만 사용
-                            if user_input.strip() == "":
-                                # 빈 입력인 경우 첫 번째 테이블만 사용
+                            if user_input.strip() == ".":
+                                # 점(.) 입력인 경우 첫 번째 테이블만 사용
                                 with st.spinner("첫 번째 테이블만 사용하여 SQL을 생성하는 중..."):
                                     try:
                                         # JOIN을 위해 저장된 테이블들 중 첫 번째만 선택
