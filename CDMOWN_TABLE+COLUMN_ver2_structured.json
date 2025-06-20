@@ -1,0 +1,3729 @@
+[
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "AC_BILL_ACC_BAS",
+    "TABLE_COMMENTS": "청구계정기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "EXCEL_STORE_YN",
+        "COLUMN_COMMENTS": "엑셀저장여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BEF_CHAGE_PAY_PRSN_IDFY_NO",
+        "COLUMN_COMMENTS": "이전요금납부자식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BEF_PAY_METH_IDFY_NO",
+        "COLUMN_COMMENTS": "이전납부방법식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BEF_DDATE_DATE_DIV_CD",
+        "COLUMN_COMMENTS": "이전납기일자구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BEF_PAY_TMS_CD",
+        "COLUMN_COMMENTS": "이전납부회차코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CMS_DEAL_DIV_CD",
+        "COLUMN_COMMENTS": "CMS거래구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BANK_DEAL_APY_DIV_CD",
+        "COLUMN_COMMENTS": "은행거래신청구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AWDR_APY_DIV_CD",
+        "COLUMN_COMMENTS": "자동이체신청구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AWDR_APY_RESLT_CD",
+        "COLUMN_COMMENTS": "자동이체신청결과코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AWDR_APY_RESLT_ERR_CD",
+        "COLUMN_COMMENTS": "자동이체신청결과오류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AWDR_APY_DATE",
+        "COLUMN_COMMENTS": "자동이체신청일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "AWDR_RSRV_STTUS_CD",
+        "COLUMN_COMMENTS": "자동이체예약상태코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AWDR_ABOL_DIV_CD",
+        "COLUMN_COMMENTS": "자동이체폐지구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SECUR_EMAIL_YN",
+        "COLUMN_COMMENTS": "보안이메일여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BLNC_TRT_YN",
+        "COLUMN_COMMENTS": "잔액처리여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "KT_BIZ_USG_YN",
+        "COLUMN_COMMENTS": "KT사업용여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ITEM_PRT_CD",
+        "COLUMN_COMMENTS": "항목인쇄코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_TEL_NO_HIDE_YN",
+        "COLUMN_COMMENTS": "청구서전화번호숨김여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PAY_METH_IDFY_NO_HIDE_YN",
+        "COLUMN_COMMENTS": "납부방법식별번호숨김여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SALE_CMPN_ID",
+        "COLUMN_COMMENTS": "판매회사아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_ATC_EXPT_YN",
+        "COLUMN_COMMENTS": "청구첨부제외여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CYB_BILL_PWD_DIV_CD",
+        "COLUMN_COMMENTS": "사이버청구비밀번호구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EV_RCV_AGREE_YN",
+        "COLUMN_COMMENTS": "이벤트수신동의여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BIZR_CUST_ID",
+        "COLUMN_COMMENTS": "사업자고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_DSP_YN",
+        "COLUMN_COMMENTS": "청구서발송여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ELEC_TAXBL_APY_CD",
+        "COLUMN_COMMENTS": "전자세금계산서신청코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FBANK_APY_CMS_TRT_RESLT_CD",
+        "COLUMN_COMMENTS": "펌뱅킹신청CMS처리결과코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FBANK_APY_DATE",
+        "COLUMN_COMMENTS": "펌뱅킹신청일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "BIZPLC_SEQ",
+        "COLUMN_COMMENTS": "사업장일련번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EMAIL_SMS_NTC_APY_YN",
+        "COLUMN_COMMENTS": "이메일단문메시지고지신청여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ENCL_BILL_TRMN_YN",
+        "COLUMN_COMMENTS": "동봉청구해지여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DDIST_TEAM_CD",
+        "COLUMN_COMMENTS": "직배팀코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHAGE_NTC_TYPE_CD",
+        "COLUMN_COMMENTS": "요금고지유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHAGE_NTC_TEL_NO",
+        "COLUMN_COMMENTS": "요금고지전화번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_DSP_TYPE_BNFIT_DIV_CD",
+        "COLUMN_COMMENTS": "청구서발송유형혜택구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "REG_ORG_ID",
+        "COLUMN_COMMENTS": "등록조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ADM_OFC_ORG_ID",
+        "COLUMN_COMMENTS": "관리국조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "GPCOM_ID",
+        "COLUMN_COMMENTS": "그룹사아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_EXP_REG_DT",
+        "COLUMN_COMMENTS": "서비스계약만료등록일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "BOND_EXCEPT_WHY_CD",
+        "COLUMN_COMMENTS": "채권예외사유코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DDATE_EXTEND_MONTH_NUM",
+        "COLUMN_COMMENTS": "납기연장월수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "MBL_ACRND_EXCEPT_YN",
+        "COLUMN_COMMENTS": "모바일청구서예외여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BSS_SYS_DIV_CD",
+        "COLUMN_COMMENTS": "BSS시스템구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CALL_SYS_DIV_CD",
+        "COLUMN_COMMENTS": "호출시스템구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NSTEP_BILL_ACC_ID",
+        "COLUMN_COMMENTS": "NSTEP청구계정아이디",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "ICIS_PAY_METH_IDFY_NO",
+        "COLUMN_COMMENTS": "ICIS납부방법식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EAI_IF_SEQ",
+        "COLUMN_COMMENTS": "EAI인터페이스일련번호",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "PAY_RSPR_CUST_ID",
+        "COLUMN_COMMENTS": "납부책임자고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CNTPY_DIV_CD",
+        "COLUMN_COMMENTS": "중앙불구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AUTON_ISTT_DC_CD",
+        "COLUMN_COMMENTS": "자치단체할인코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BEF_PAY_METH_CHG_DATE",
+        "COLUMN_COMMENTS": "이전납부방법변경일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PAY_PRSN_ADM_TYPE_CD_VAL",
+        "COLUMN_COMMENTS": "납부자관리유형코드값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PAY_PRSN_ADM_CD_VAL",
+        "COLUMN_COMMENTS": "납부자관리코드값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_DSP_WLESS_COMM_BIZR_CD",
+        "COLUMN_COMMENTS": "청구서발송무선통신사업자코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_DSP_MPHON_NO",
+        "COLUMN_COMMENTS": "청구서발송이동전화번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_TCH_MEDI_CD",
+        "COLUMN_COMMENTS": "고객접촉매체코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APY_REL_TYPE_CD",
+        "COLUMN_COMMENTS": "신청관계유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_NM",
+        "COLUMN_COMMENTS": "신청자명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_CNTC_NO1",
+        "COLUMN_COMMENTS": "신청자연락번호1",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_CNTC_NO2",
+        "COLUMN_COMMENTS": "신청자연락번호2",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_ITEM_SIMPL_MARK_YN",
+        "COLUMN_COMMENTS": "청구서항목단순표기여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_ACC_ID",
+        "COLUMN_COMMENTS": "청구계정아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "BILL_CUST_ID",
+        "COLUMN_COMMENTS": "청구고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_ACC_DIV_CD",
+        "COLUMN_COMMENTS": "청구계정구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_PROD_DIV_CD",
+        "COLUMN_COMMENTS": "청구상품구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PAY_METH_CD",
+        "COLUMN_COMMENTS": "납부방법코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHAGE_PAY_PRSN_NM",
+        "COLUMN_COMMENTS": "요금납부자명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHAGE_PAY_PRSN_IDFY_NO",
+        "COLUMN_COMMENTS": "요금납부자식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PAY_METH_IDFY_NO",
+        "COLUMN_COMMENTS": "납부방법식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DDATE_DATE_DIV_CD",
+        "COLUMN_COMMENTS": "납기일자구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PAY_TMS_CD",
+        "COLUMN_COMMENTS": "납부회차코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CCARD_EXPIR_DATE",
+        "COLUMN_COMMENTS": "신용카드만기일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "BANK_CD",
+        "COLUMN_COMMENTS": "은행코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CCARD_DIV_CD",
+        "COLUMN_COMMENTS": "신용카드구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CARD_BYCMP_CD",
+        "COLUMN_COMMENTS": "카드매입사코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SHW_PHOSV_BANK_CD",
+        "COLUMN_COMMENTS": "쇼폰세이브은행코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CARD_ISUCOMP_CD",
+        "COLUMN_COMMENTS": "카드발급사코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BLG_APLY_YM",
+        "COLUMN_COMMENTS": "빌링적용년월",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_DSP_TYPE_BAS_YN",
+        "COLUMN_COMMENTS": "청구서발송유형기본여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_DSP_TYPE_CD",
+        "COLUMN_COMMENTS": "청구서발송유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ANPAP_PTSHT_TYPE_CD",
+        "COLUMN_COMMENTS": "별첨내역서유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_SHAP_TYPE_CD",
+        "COLUMN_COMMENTS": "청구서형태유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ADR_DIV_CD",
+        "COLUMN_COMMENTS": "주소구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHR_ACRND_RCV_TEL_NO",
+        "COLUMN_COMMENTS": "문자청구서수신전화번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_OTPUT_NM",
+        "COLUMN_COMMENTS": "청구서출력명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PAY_METH_CHG_DATE",
+        "COLUMN_COMMENTS": "납부방법변경일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "BEF_PAY_METH_CD",
+        "COLUMN_COMMENTS": "이전납부방법코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BEF_CHAGE_PAY_PRSN_NM",
+        "COLUMN_COMMENTS": "이전요금납부자명",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "AC_BILL_ACC_REL_HST",
+    "TABLE_COMMENTS": "청구계정관계이력",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "EXP_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "만료처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EXP_TRT_EMP_ID",
+        "COLUMN_COMMENTS": "만료처리사원아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "INS_FRMPAP_CNCT_SEQ",
+        "COLUMN_COMMENTS": "삽입서식지연결일련번호",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "EXP_FRMPAP_CNCT_SEQ",
+        "COLUMN_COMMENTS": "만료서식지연결일련번호",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "BASE_BILL_ACC_ID",
+        "COLUMN_COMMENTS": "기준청구계정아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TGT_BILL_ACC_ID",
+        "COLUMN_COMMENTS": "대상청구계정아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_ACC_REL_TYPE_CD",
+        "COLUMN_COMMENTS": "청구계정관계유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DT",
+        "COLUMN_COMMENTS": "유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "BILL_ACC_REL_TYPE_DTL_CD",
+        "COLUMN_COMMENTS": "청구계정관계유형상세코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_TCH_MEDI_CD",
+        "COLUMN_COMMENTS": "고객접촉매체코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APY_REL_TYPE_CD",
+        "COLUMN_COMMENTS": "신청관계유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_NM",
+        "COLUMN_COMMENTS": "신청자명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_CNTC_NO1",
+        "COLUMN_COMMENTS": "신청자연락번호1",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_CNTC_NO2",
+        "COLUMN_COMMENTS": "신청자연락번호2",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "AC_SVC_CONT_CLAS_HST",
+    "TABLE_COMMENTS": "서비스계약등급이력",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "SVC_CONT_ID",
+        "COLUMN_COMMENTS": "서비스계약아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DATE",
+        "COLUMN_COMMENTS": "유효시작일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DATE",
+        "COLUMN_COMMENTS": "유효종료일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_CLAS_CD",
+        "COLUMN_COMMENTS": "서비스계약등급코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_CLAS_BASIS_YY",
+        "COLUMN_COMMENTS": "서비스계약등급근거년도",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_CUST_CLAS_FNS_WHY_CD",
+        "COLUMN_COMMENTS": "서비스계약고객등급종료사유코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DLINQ_ST_DATE",
+        "COLUMN_COMMENTS": "연체시작일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "DLINQ_YN",
+        "COLUMN_COMMENTS": "연체여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CMP_ST_YM",
+        "COLUMN_COMMENTS": "산출시작년월",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CMP_FNS_YM",
+        "COLUMN_COMMENTS": "산출종료년월",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BEF_SVC_CONT_CLAS_CD",
+        "COLUMN_COMMENTS": "이전서비스계약등급코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_CLAS_BASE_SCORE",
+        "COLUMN_COMMENTS": "서비스계약등급기준점수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_CLAS_SLNG_SCORE",
+        "COLUMN_COMMENTS": "서비스계약등급매출점수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "WLESS_SBSC_YEAR_NUM",
+        "COLUMN_COMMENTS": "무선가입년수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "WLESS_SBSC_PERD_RATE",
+        "COLUMN_COMMENTS": "무선가입기간율",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "WRLIN_SBSC_YEAR_NUM",
+        "COLUMN_COMMENTS": "유선가입년수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "WRLIN_SBSC_PERD_RATE",
+        "COLUMN_COMMENTS": "유선가입기간율",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "MONS_BASE_SCORE",
+        "COLUMN_COMMENTS": "개월기준점수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "CPRT_VNDR_ID",
+        "COLUMN_COMMENTS": "제휴업체아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_CUST_CLAS_CHG_WHY_CD",
+        "COLUMN_COMMENTS": "서비스계약고객등급변경사유코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_CLAS_CHG_DT",
+        "COLUMN_COMMENTS": "서비스계약등급변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "DC_COUPN_USE_YN",
+        "COLUMN_COMMENTS": "할인쿠폰사용여부",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "AC_SVC_CONT_DIV_CD",
+    "TABLE_COMMENTS": "서비스계약구분코드, LOB 구분 코드",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "SVC_CONT_DIV_CD",
+        "COLUMN_COMMENTS": "서비스계약구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DT",
+        "COLUMN_COMMENTS": "유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_DIV_NM",
+        "COLUMN_COMMENTS": "서비스계약구분명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SINGL_COMB_DIV_CD",
+        "COLUMN_COMMENTS": "단일결합구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "INET_INCL_YN",
+        "COLUMN_COMMENTS": "인터넷포함여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MBL_INCL_YN",
+        "COLUMN_COMMENTS": "모바일포함여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RMNY_PREF_RANK",
+        "COLUMN_COMMENTS": "수납우선순위",
+        "DATA_TYPE": "NUMBER"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CS_CUST_BAS",
+    "TABLE_COMMENTS": "고객기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "CUST_ID",
+        "COLUMN_COMMENTS": "고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "CUST_NM",
+        "COLUMN_COMMENTS": "고객명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_IDFY_NO",
+        "COLUMN_COMMENTS": "고객식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_IDFY_NO_TYPE_CD",
+        "COLUMN_COMMENTS": "고객식별번호유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_TYPE_CD",
+        "COLUMN_COMMENTS": "고객유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_PTCL_TYPE_CD",
+        "COLUMN_COMMENTS": "고객세부유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SALE_CMPN_ID",
+        "COLUMN_COMMENTS": "판매회사아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DGT3_CNTRY_CD",
+        "COLUMN_COMMENTS": "세자리국가코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DUPL_CUST_YN",
+        "COLUMN_COMMENTS": "중복고객여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DUPL_CUST_WHY_CD",
+        "COLUMN_COMMENTS": "중복고객사유코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PERSON_SEX_DIV_CD",
+        "COLUMN_COMMENTS": "인물성별구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "REG_ORG_ID",
+        "COLUMN_COMMENTS": "등록조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_STTUS_TYPE_CD",
+        "COLUMN_COMMENTS": "고객상태유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_STTUS_EFCT_ST_DATE",
+        "COLUMN_COMMENTS": "고객상태유효시작일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "IPIN_CI",
+        "COLUMN_COMMENTS": "아이핀CI",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "IPIN_DI",
+        "COLUMN_COMMENTS": "아이핀DI",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ICIS_CUST_ID",
+        "COLUMN_COMMENTS": "ICIS고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NSTEP_CUST_ID",
+        "COLUMN_COMMENTS": "NSTEP고객아이디",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "RNM_ATHN_YN",
+        "COLUMN_COMMENTS": "실명인증여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EXP_DATE",
+        "COLUMN_COMMENTS": "만료일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "IF_EXPT_YN",
+        "COLUMN_COMMENTS": "인터페이스제외여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BOCU_ID",
+        "COLUMN_COMMENTS": "BO고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CS_CUST_DTL",
+    "TABLE_COMMENTS": "고객상세",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "CUST_ID",
+        "COLUMN_COMMENTS": "고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "ENTPR_SCALE_CD",
+        "COLUMN_COMMENTS": "기업규모코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_REPR_NM",
+        "COLUMN_COMMENTS": "고객대표자명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "REPR_PERSON_SEX_DIV_CD",
+        "COLUMN_COMMENTS": "대표자인물성별구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "REPR_BTHDAY_DATE",
+        "COLUMN_COMMENTS": "대표자생년월일일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "CUST_REP_TEL_NO",
+        "COLUMN_COMMENTS": "고객대표전화번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "REP_BIZNO",
+        "COLUMN_COMMENTS": "대표사업자등록번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_TAXTN_YN",
+        "COLUMN_COMMENTS": "단위과세여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FONDN_DATE",
+        "COLUMN_COMMENTS": "창립일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PBLS_DATE",
+        "COLUMN_COMMENTS": "발행일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "TPIND_CD",
+        "COLUMN_COMMENTS": "업종코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BIZCD_CD",
+        "COLUMN_COMMENTS": "업태코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TPIND_SBST",
+        "COLUMN_COMMENTS": "업종내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BIZCD_SBST",
+        "COLUMN_COMMENTS": "업태내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LSTD_DIV_CD",
+        "COLUMN_COMMENTS": "상장구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LSTD_DATE",
+        "COLUMN_COMMENTS": "상장일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SLNG_AMT",
+        "COLUMN_COMMENTS": "매출금액",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "CPTL_AMT",
+        "COLUMN_COMMENTS": "자본금액",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "BIZR_BIZ_STTUS_CD",
+        "COLUMN_COMMENTS": "사업자사업상태코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TAXBL_INFO_ABOL_WHY_CD",
+        "COLUMN_COMMENTS": "세금계산서정보폐지사유코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BIZR_TAX_TYPE_CD",
+        "COLUMN_COMMENTS": "사업자세금유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MAIN_BIZ_SBST",
+        "COLUMN_COMMENTS": "주요사업내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MAIN_PROD_NM",
+        "COLUMN_COMMENTS": "주요상품명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BRND_NM",
+        "COLUMN_COMMENTS": "브랜드명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EMPL_NUM_CALTN_YY",
+        "COLUMN_COMMENTS": "종업원수산정년도",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EMPL_NUM",
+        "COLUMN_COMMENTS": "종업원수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "LOCAL_BSTOR_CNT",
+        "COLUMN_COMMENTS": "시내지점개수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "SUBRB_BSTOR_CNT",
+        "COLUMN_COMMENTS": "시외지점개수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "FRGN_BRCH_CNT",
+        "COLUMN_COMMENTS": "국외지사개수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "ENTPR_OTTP_TYPE_CD",
+        "COLUMN_COMMENTS": "기업공개유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ENTPR_TYPE_CD",
+        "COLUMN_COMMENTS": "기업유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "HANDL_PITEM_SBST",
+        "COLUMN_COMMENTS": "취급품목내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MONTH_AVG_COMM_COST_AMT",
+        "COLUMN_COMMENTS": "월평균통신비용금액",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "JOB_CD",
+        "COLUMN_COMMENTS": "직업코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BTHDAY_DATE",
+        "COLUMN_COMMENTS": "생년월일일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SLRCLN_LCAL_DIV_CD",
+        "COLUMN_COMMENTS": "양력음력구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MARRY_YN",
+        "COLUMN_COMMENTS": "결혼여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MARRY_CMRTN_DATE",
+        "COLUMN_COMMENTS": "결혼기념일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "CAR_PSSN_YN",
+        "COLUMN_COMMENTS": "자동차보유여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHILD_NUM",
+        "COLUMN_COMMENTS": "자녀수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "FORN_REG_EXP_DATE",
+        "COLUMN_COMMENTS": "외국인등록만료일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "FORN_REG_NO_DTL_TYPE_CD",
+        "COLUMN_COMMENTS": "외국인등록번호상세유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EMP_ID",
+        "COLUMN_COMMENTS": "사원아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SOJN_PRPS_CD",
+        "COLUMN_COMMENTS": "체류목적코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BOMB_ID",
+        "COLUMN_COMMENTS": "BO회원아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BOMB_TYPE_CD",
+        "COLUMN_COMMENTS": "BO회원유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EC_CUST_ADM_SBST",
+        "COLUMN_COMMENTS": "EC고객관리내용",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CS_CUST_HST",
+    "TABLE_COMMENTS": "고객이력",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "CUST_ID",
+        "COLUMN_COMMENTS": "고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "OCC_DT",
+        "COLUMN_COMMENTS": "발생일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "CUST_CHG_TYPE_CD",
+        "COLUMN_COMMENTS": "고객변경유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_TYPE_CD",
+        "COLUMN_COMMENTS": "고객유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_IDFY_NO_TYPE_CD",
+        "COLUMN_COMMENTS": "고객식별번호유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_IDFY_NO",
+        "COLUMN_COMMENTS": "고객식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_NM",
+        "COLUMN_COMMENTS": "고객명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "REL_CUST_IDFY_NO_TYPE_CD",
+        "COLUMN_COMMENTS": "관계고객식별번호유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "REL_CUST_IDFY_NO",
+        "COLUMN_COMMENTS": "관계고객식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACHNG_CUST_TYPE_CD",
+        "COLUMN_COMMENTS": "변경후고객유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACHNG_CUST_IDFY_NO_TYPE_CD",
+        "COLUMN_COMMENTS": "변경후고객식별번호유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACHNG_CUST_IDFY_NO",
+        "COLUMN_COMMENTS": "변경후고객식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACHNG_CUST_NM",
+        "COLUMN_COMMENTS": "변경후고객명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACHNG_REL_CUST_IDFY_NO_TYPE_CD",
+        "COLUMN_COMMENTS": "변경후관계고객식별번호유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACHNG_REL_CUST_IDFY_NO",
+        "COLUMN_COMMENTS": "변경후관계고객식별번호",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CS_CUST_REL_HST",
+    "TABLE_COMMENTS": "고객관계이력",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "REL_EXP_PAM_DT",
+        "COLUMN_COMMENTS": "관계만료예정일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "BASE_CUST_ID",
+        "COLUMN_COMMENTS": "기준고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TGT_CUST_ID",
+        "COLUMN_COMMENTS": "대상고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_REL_DIV_CD",
+        "COLUMN_COMMENTS": "고객관계구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DT",
+        "COLUMN_COMMENTS": "유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "WNWLS_DIV_CD",
+        "COLUMN_COMMENTS": "유무선구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "IF_EXPT_YN",
+        "COLUMN_COMMENTS": "인터페이스제외여부",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CS_CUST_TYPE_CD",
+    "TABLE_COMMENTS": "고객유형코드",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "CUST_TYPE_CD",
+        "COLUMN_COMMENTS": "고객유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_IDFY_NO_TYPE_CD",
+        "COLUMN_COMMENTS": "고객식별번호유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "CUST_TYPE_NM",
+        "COLUMN_COMMENTS": "고객유형명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_IDFY_NO_DGT_NUM",
+        "COLUMN_COMMENTS": "고객식별번호자리수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "CUST_IDFY_NO_CHK_COND_SBST1",
+        "COLUMN_COMMENTS": "고객식별번호점검조건내용1",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_IDFY_NO_CHK_COND_SBST2",
+        "COLUMN_COMMENTS": "고객식별번호점검조건내용2",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CS_PUB_MYD_AGREE_BAS",
+    "TABLE_COMMENTS": "공공마이데이터동의기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "PUB_MYD_AGREE_SEQ",
+        "COLUMN_COMMENTS": "공공마이데이터동의일련번호",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "PUB_MYD_AGREE_RQT_DT",
+        "COLUMN_COMMENTS": "공공마이데이터동의요청일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "CUST_ID",
+        "COLUMN_COMMENTS": "고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AGREE_RPY_CLO_DT",
+        "COLUMN_COMMENTS": "동의응답마감일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "AGREE_YN",
+        "COLUMN_COMMENTS": "동의여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AGREE_EFCT_ST_DT",
+        "COLUMN_COMMENTS": "동의유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "AGREE_EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "동의유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "RCV_TEL_NO",
+        "COLUMN_COMMENTS": "수신모바일번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RCV_URL_ADR",
+        "COLUMN_COMMENTS": "수신URL주소",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "GLBL_UNIQ_ID",
+        "COLUMN_COMMENTS": "글로벌유일아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMLY_REL_CERT_FAMLY_REL_CD",
+        "COLUMN_COMMENTS": "가족관계증명서가족관계코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMLY_REL_CERT_FNM_NM",
+        "COLUMN_COMMENTS": "가족관계증명서성명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "IF_HST_NO",
+        "COLUMN_COMMENTS": "인터페이스이력번호",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "IF_WRK_DIV_CD",
+        "COLUMN_COMMENTS": "인터페이스작업구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "IF_TRIGR_CRET_DT",
+        "COLUMN_COMMENTS": "인터페이스트리거생성일시",
+        "DATA_TYPE": "TIMESTAMP(6)"
+      },
+      {
+        "COLUMN_NAME": "IF_TRT_DT_VAL",
+        "COLUMN_COMMENTS": "인터페이스처리일시값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "IF_TRT_YN",
+        "COLUMN_COMMENTS": "인터페이스처리여부",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CS_TRMN_CUST_RECVR_TR_TXN",
+    "TABLE_COMMENTS": "해지고객복구처리내역",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "BSS_SYS_DIV_CD",
+        "COLUMN_COMMENTS": "BSS시스템구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TRMN_CUST_RECVR_TRT_APY_NO",
+        "COLUMN_COMMENTS": "해지고객복구처리신청번호",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "APY_DT",
+        "COLUMN_COMMENTS": "신청일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "APYR_ID",
+        "COLUMN_COMMENTS": "신청자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_NM",
+        "COLUMN_COMMENTS": "신청자명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TRMN_CUST_RECVR_APY_TYPE_CD",
+        "COLUMN_COMMENTS": "해지고객복구신청유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_ORG_NM",
+        "COLUMN_COMMENTS": "신청자조직명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_TEL_NO",
+        "COLUMN_COMMENTS": "신청자전화번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APYR_ORG_ID",
+        "COLUMN_COMMENTS": "신청자조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TRMN_CUST_RECVR_MYSLF_CONF_CD",
+        "COLUMN_COMMENTS": "해지고객복구본인확인코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RECVR_TRT_HOPE_DATE",
+        "COLUMN_COMMENTS": "복구처리희망일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "APVR_ID",
+        "COLUMN_COMMENTS": "승인자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TRMN_CUST_RECVR_APY_SBST",
+        "COLUMN_COMMENTS": "해지고객복구신청내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RGN_HQ_CD",
+        "COLUMN_COMMENTS": "지역본부코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TRMN_CUST_RECVR_OPIN_SBST",
+        "COLUMN_COMMENTS": "해지고객복구의견내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APV_DT",
+        "COLUMN_COMMENTS": "승인일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "TRMN_CUST_RECVR_APV_CD",
+        "COLUMN_COMMENTS": "해지고객복구승인코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RECVR_TRT_YN",
+        "COLUMN_COMMENTS": "복구처리여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DAT_DEL_DATE",
+        "COLUMN_COMMENTS": "자료삭제일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "WRKJOB_FNS_TRT_YN",
+        "COLUMN_COMMENTS": "업무종료처리여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RETV_AUT_ALC_CD",
+        "COLUMN_COMMENTS": "조회권한부여코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_ID",
+        "COLUMN_COMMENTS": "고객아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_NM",
+        "COLUMN_COMMENTS": "고객명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_ID",
+        "COLUMN_COMMENTS": "서비스계약아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_BTHDAY_DATE",
+        "COLUMN_COMMENTS": "고객생년월일일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "BIZNO",
+        "COLUMN_COMMENTS": "사업자등록번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_NO",
+        "COLUMN_COMMENTS": "서비스번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_ID_RECVR_YN",
+        "COLUMN_COMMENTS": "고객아이디복구여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SVC_CONT_ID_RECVR_YN",
+        "COLUMN_COMMENTS": "서비스계약아이디복구여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_ACC_ID_RECVR_YN",
+        "COLUMN_COMMENTS": "청구계정아이디복구여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "IMG_RESLT_CD",
+        "COLUMN_COMMENTS": "이미지결과코드",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CW_COMN_CD_BAS",
+    "TABLE_COMMENTS": "공통코드기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "CD_GROUP_ID",
+        "COLUMN_COMMENTS": "코드그룹아이디",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "CD_ID",
+        "COLUMN_COMMENTS": "코드아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PKG_CD_MAPPG_YN",
+        "COLUMN_COMMENTS": "패키지코드매핑여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "STD_CD_ID",
+        "COLUMN_COMMENTS": "표준코드아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CD_NM",
+        "COLUMN_COMMENTS": "코드명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CD_DESC_SBST",
+        "COLUMN_COMMENTS": "코드설명내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CD_OTPUT_ODRG",
+        "COLUMN_COMMENTS": "코드출력순서",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "CD_LVL_VAL",
+        "COLUMN_COMMENTS": "코드레벨값",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "UP_CD_ID",
+        "COLUMN_COMMENTS": "상위코드아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UP_CD_GROUP_ID",
+        "COLUMN_COMMENTS": "상위코드그룹아이디",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "RFRN_VAL1",
+        "COLUMN_COMMENTS": "참고값1",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RFRN_VAL2",
+        "COLUMN_COMMENTS": "참고값2",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RFRN_VAL3",
+        "COLUMN_COMMENTS": "참고값3",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RFRN_VAL4",
+        "COLUMN_COMMENTS": "참고값4",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RFRN_VAL5",
+        "COLUMN_COMMENTS": "참고값5",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RMARK",
+        "COLUMN_COMMENTS": "비고",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SIEBE_CNTRY_DIV_CD",
+        "COLUMN_COMMENTS": "SIEBEL국가구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MLGA_MULUSE_YN",
+        "COLUMN_COMMENTS": "다국어멀티사용여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MLGA_CHANGE_YN",
+        "COLUMN_COMMENTS": "다국어변환여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DATE",
+        "COLUMN_COMMENTS": "유효시작일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DATE",
+        "COLUMN_COMMENTS": "유효종료일자",
+        "DATA_TYPE": "DATE"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CW_COMN_CD_GROUP_BAS",
+    "TABLE_COMMENTS": "공통코드그룹기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "MSTR_CD_GROUP_ID",
+        "COLUMN_COMMENTS": "마스터코드그룹아이디",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "PKG_CD_GROUP_ENG_NM",
+        "COLUMN_COMMENTS": "패키지코드그룹영문명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DATE",
+        "COLUMN_COMMENTS": "유효시작일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DATE",
+        "COLUMN_COMMENTS": "유효종료일자",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "CD_GROUP_ID",
+        "COLUMN_COMMENTS": "코드그룹아이디",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "CD_GROUP_NM",
+        "COLUMN_COMMENTS": "코드그룹명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CD_GROUP_ENG_NM",
+        "COLUMN_COMMENTS": "코드그룹영문명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CD_GROUP_DESC_SBST",
+        "COLUMN_COMMENTS": "코드그룹설명내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CD_LEN_VAL",
+        "COLUMN_COMMENTS": "코드길이값",
+        "DATA_TYPE": "NUMBER"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "CW_COMN_CD_MAPPG_BAS",
+    "TABLE_COMMENTS": "공통코드매핑기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "LEGACY_CD_TBL_NM",
+        "COLUMN_COMMENTS": "레거시코드테이블명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LEGACY_CD_GROUP_ID",
+        "COLUMN_COMMENTS": "레거시코드그룹아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LEGACY_CD_ID",
+        "COLUMN_COMMENTS": "레거시코드아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NGEN_CD_SEQ",
+        "COLUMN_COMMENTS": "차세대코드일련번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "LEGACY_SYS_NM",
+        "COLUMN_COMMENTS": "레거시시스템명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LEGACY_USER_NM",
+        "COLUMN_COMMENTS": "레거시사용자명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LEGACY_CD_GROUP_NM",
+        "COLUMN_COMMENTS": "레거시코드그룹명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LEGACY_CD_GROUP_ENG_NM",
+        "COLUMN_COMMENTS": "레거시코드그룹영문명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LEGACY_CD_NM",
+        "COLUMN_COMMENTS": "레거시코드명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NGEN_CD_TBL_NM",
+        "COLUMN_COMMENTS": "차세대코드테이블명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NGEN_CD_GROUP_ID",
+        "COLUMN_COMMENTS": "차세대코드그룹아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NGEN_CD_ID",
+        "COLUMN_COMMENTS": "차세대코드아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NGEN_CD_GROUP_ENG_NM",
+        "COLUMN_COMMENTS": "차세대코드그룹영문명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NGEN_USE_YN",
+        "COLUMN_COMMENTS": "차세대사용여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SORT_ODRG",
+        "COLUMN_COMMENTS": "정렬순서",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "RMARK1",
+        "COLUMN_COMMENTS": "비고1",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RMARK2",
+        "COLUMN_COMMENTS": "비고2",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RMARK3",
+        "COLUMN_COMMENTS": "비고3",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RMARK4",
+        "COLUMN_COMMENTS": "비고4",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "PR_DC_BAS",
+    "TABLE_COMMENTS": "할인기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "DC_SECT_ASBYDAY_YN",
+        "COLUMN_COMMENTS": "할인구간일할여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_AMT_ASBYDAY_YN",
+        "COLUMN_COMMENTS": "할인금액일할여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_ASBYDAY_CD",
+        "COLUMN_COMMENTS": "할인일할코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_NXT_MONTH_APLY_CD",
+        "COLUMN_COMMENTS": "할인다음월적용코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APLY_DELAY_DAY_NUM",
+        "COLUMN_COMMENTS": "적용지연일수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "TOT_DC_RSTRTN_AMT",
+        "COLUMN_COMMENTS": "총할인제한금액",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "DC_ST_FNS_TYPE_CD",
+        "COLUMN_COMMENTS": "할인시작종료유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_APLY_LVL_CD",
+        "COLUMN_COMMENTS": "할인적용레벨코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_TGT_CD",
+        "COLUMN_COMMENTS": "할인대상코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_GROUP_VAL",
+        "COLUMN_COMMENTS": "할인그룹값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_DTL_GROUP_CD",
+        "COLUMN_COMMENTS": "할인상세그룹코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_TYPE_VAL",
+        "COLUMN_COMMENTS": "할인유형값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PENLT_ADM_DIV_VAL",
+        "COLUMN_COMMENTS": "위약금관리구분값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_SUCC_YN",
+        "COLUMN_COMMENTS": "할인승계여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NEW_DC_RTACT_APLY_YN",
+        "COLUMN_COMMENTS": "신규할인소급적용여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "WHOLE_CHAGE_ITEM_DC_APLY_YN",
+        "COLUMN_COMMENTS": "전체요금항목할인적용여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CIRCUIT_NUM_CMP_METH_CD",
+        "COLUMN_COMMENTS": "회선수산출방법코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "XOR_APLY_POTIM_VAL",
+        "COLUMN_COMMENTS": "XOR적용시점값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LOW_DUPL_APLY_EXPT_VAL",
+        "COLUMN_COMMENTS": "하위중복적용제외값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DUPL_EXPT_ASBYDAY_CALC_VAL",
+        "COLUMN_COMMENTS": "중복제외일할계산값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_APLY_MONS_NUM",
+        "COLUMN_COMMENTS": "할인적용개월수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "DC_ACCUM_MONS_NUM",
+        "COLUMN_COMMENTS": "할인누적개월수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "DC_PLAN_CRET_WRKJOB_CD",
+        "COLUMN_COMMENTS": "할인계획생성업무코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RNE_CONT_YN",
+        "COLUMN_COMMENTS": "감면계약여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_VAL_NM",
+        "COLUMN_COMMENTS": "할인값명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_VAL_NM1",
+        "COLUMN_COMMENTS": "할인값명1",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_VAL_NM2",
+        "COLUMN_COMMENTS": "할인값명2",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "COMB_PRCSS_PRIC_TGT_CD",
+        "COLUMN_COMMENTS": "결합공정가격대상코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_GROUP_CTG_CD",
+        "COLUMN_COMMENTS": "할인그룹분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_PURP_CD",
+        "COLUMN_COMMENTS": "할인용도코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DUPL_DC_APLY_YN",
+        "COLUMN_COMMENTS": "중복할인적용여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_RETV_DC_TYPE_CD",
+        "COLUMN_COMMENTS": "고객조회할인유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DISP_DC_NM",
+        "COLUMN_COMMENTS": "디스플레이할인명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_ID",
+        "COLUMN_COMMENTS": "할인아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APLY_ST_YM",
+        "COLUMN_COMMENTS": "적용시작년월",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "DC_NM",
+        "COLUMN_COMMENTS": "할인명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APLY_FNS_YM",
+        "COLUMN_COMMENTS": "적용종료년월",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "WNWLS_DIV_CD",
+        "COLUMN_COMMENTS": "유무선구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_TRT_PREF_RANK",
+        "COLUMN_COMMENTS": "할인처리우선순위",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "SAME_TYPE_AND_PREF_RANK",
+        "COLUMN_COMMENTS": "동일유형AND우선순위",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "SAME_TYPE_XOR_PREF_RANK",
+        "COLUMN_COMMENTS": "동일유형XOR우선순위",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "DC_PRIRT_GROUP_CD",
+        "COLUMN_COMMENTS": "할인우선순위그룹코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_APLY_METH_TYPE_CD",
+        "COLUMN_COMMENTS": "할인적용방법유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_METH_CD",
+        "COLUMN_COMMENTS": "할인방법코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DC_TGT_AMT_TYPE_CD",
+        "COLUMN_COMMENTS": "할인대상금액유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RMND_DC_AMT_TRT_YN",
+        "COLUMN_COMMENTS": "잔여할인금액처리여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_DC_YN",
+        "COLUMN_COMMENTS": "상품할인여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SBSD_ADM_DC_YN",
+        "COLUMN_COMMENTS": "보조금관리할인여부",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "PR_ONTM_TARIF_META_CD",
+    "TABLE_COMMENTS": "일회성요율메타코드",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "PROD_ID",
+        "COLUMN_COMMENTS": "상품아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_ID",
+        "COLUMN_COMMENTS": "단위서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_APD_INFO_TYPE_CD",
+        "COLUMN_COMMENTS": "상품추가정보유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DT",
+        "COLUMN_COMMENTS": "유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PROD_APD_META_TYPE_CD",
+        "COLUMN_COMMENTS": "상품추가메타유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST01",
+        "COLUMN_COMMENTS": "추가정보문자내용01",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST02",
+        "COLUMN_COMMENTS": "추가정보문자내용02",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST03",
+        "COLUMN_COMMENTS": "추가정보문자내용03",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST04",
+        "COLUMN_COMMENTS": "추가정보문자내용04",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST05",
+        "COLUMN_COMMENTS": "추가정보문자내용05",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST06",
+        "COLUMN_COMMENTS": "추가정보문자내용06",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST07",
+        "COLUMN_COMMENTS": "추가정보문자내용07",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST08",
+        "COLUMN_COMMENTS": "추가정보문자내용08",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST09",
+        "COLUMN_COMMENTS": "추가정보문자내용09",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST10",
+        "COLUMN_COMMENTS": "추가정보문자내용10",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST11",
+        "COLUMN_COMMENTS": "추가정보문자내용11",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST12",
+        "COLUMN_COMMENTS": "추가정보문자내용12",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST13",
+        "COLUMN_COMMENTS": "추가정보문자내용13",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST14",
+        "COLUMN_COMMENTS": "추가정보문자내용14",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST15",
+        "COLUMN_COMMENTS": "추가정보문자내용15",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST16",
+        "COLUMN_COMMENTS": "추가정보문자내용16",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST17",
+        "COLUMN_COMMENTS": "추가정보문자내용17",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST18",
+        "COLUMN_COMMENTS": "추가정보문자내용18",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST19",
+        "COLUMN_COMMENTS": "추가정보문자내용19",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST20",
+        "COLUMN_COMMENTS": "추가정보문자내용20",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST21",
+        "COLUMN_COMMENTS": "추가정보문자내용21",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST22",
+        "COLUMN_COMMENTS": "추가정보문자내용22",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST23",
+        "COLUMN_COMMENTS": "추가정보문자내용23",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST24",
+        "COLUMN_COMMENTS": "추가정보문자내용24",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST25",
+        "COLUMN_COMMENTS": "추가정보문자내용25",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST26",
+        "COLUMN_COMMENTS": "추가정보문자내용26",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST27",
+        "COLUMN_COMMENTS": "추가정보문자내용27",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST28",
+        "COLUMN_COMMENTS": "추가정보문자내용28",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST29",
+        "COLUMN_COMMENTS": "추가정보문자내용29",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST30",
+        "COLUMN_COMMENTS": "추가정보문자내용30",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST31",
+        "COLUMN_COMMENTS": "추가정보문자내용31",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST32",
+        "COLUMN_COMMENTS": "추가정보문자내용32",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST33",
+        "COLUMN_COMMENTS": "추가정보문자내용33",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST34",
+        "COLUMN_COMMENTS": "추가정보문자내용34",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST35",
+        "COLUMN_COMMENTS": "추가정보문자내용35",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST36",
+        "COLUMN_COMMENTS": "추가정보문자내용36",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST37",
+        "COLUMN_COMMENTS": "추가정보문자내용37",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST38",
+        "COLUMN_COMMENTS": "추가정보문자내용38",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST39",
+        "COLUMN_COMMENTS": "추가정보문자내용39",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST40",
+        "COLUMN_COMMENTS": "추가정보문자내용40",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST41",
+        "COLUMN_COMMENTS": "추가정보문자내용41",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST42",
+        "COLUMN_COMMENTS": "추가정보문자내용42",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST43",
+        "COLUMN_COMMENTS": "추가정보문자내용43",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST44",
+        "COLUMN_COMMENTS": "추가정보문자내용44",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST45",
+        "COLUMN_COMMENTS": "추가정보문자내용45",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST46",
+        "COLUMN_COMMENTS": "추가정보문자내용46",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST47",
+        "COLUMN_COMMENTS": "추가정보문자내용47",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST48",
+        "COLUMN_COMMENTS": "추가정보문자내용48",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST49",
+        "COLUMN_COMMENTS": "추가정보문자내용49",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_INFO_CHR_SBST50",
+        "COLUMN_COMMENTS": "추가정보문자내용50",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "PR_PROD_BAS",
+    "TABLE_COMMENTS": "상품기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "SBSC_PERD_CTG_CD",
+        "COLUMN_COMMENTS": "가입기간분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_COMPOSI_CTG_CD",
+        "COLUMN_COMMENTS": "상품구성분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_USE_PURP_CTG_CD",
+        "COLUMN_COMMENTS": "상품사용용도분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_METH_CTG_CD",
+        "COLUMN_COMMENTS": "청구방법분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MRKTG_REP_PROD_CTG_CD",
+        "COLUMN_COMMENTS": "마케팅대표상품분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MRKTG_PROD_CTG_CD",
+        "COLUMN_COMMENTS": "마케팅상품분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_SALE_ST_DT",
+        "COLUMN_COMMENTS": "상품판매시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PROD_SALE_FNS_DT",
+        "COLUMN_COMMENTS": "상품판매종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SALE_BIZR_DIV_CD",
+        "COLUMN_COMMENTS": "판매사업자구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_PLAN_USER_ID",
+        "COLUMN_COMMENTS": "상품계획사용자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_PLAN_ORG_ID",
+        "COLUMN_COMMENTS": "상품계획조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TRT_SR_NO",
+        "COLUMN_COMMENTS": "처리SR번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TRT_DT",
+        "COLUMN_COMMENTS": "처리일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SR_RQT_BIZ_DEPT_NM",
+        "COLUMN_COMMENTS": "SR요청사업부서명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RQT_TKCGR_NM",
+        "COLUMN_COMMENTS": "요청담당자명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_SBSC_LVL_CD",
+        "COLUMN_COMMENTS": "상품가입레벨코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_TYPE_CD",
+        "COLUMN_COMMENTS": "고객유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SALE_CMPN_ID",
+        "COLUMN_COMMENTS": "판매회사아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ASIGN_NO_MAX_CASCNT",
+        "COLUMN_COMMENTS": "지정번호최대건수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "CONT_PURP_CD",
+        "COLUMN_COMMENTS": "계약용도코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BIZ_PROD_YN",
+        "COLUMN_COMMENTS": "사업상품여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SHRTN_TRM_YN",
+        "COLUMN_COMMENTS": "단문전송여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "QUOTA_RETV_PROD_YN",
+        "COLUMN_COMMENTS": "견적조회상품여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "INTELNET_PROD_YN_CD",
+        "COLUMN_COMMENTS": "지능망상품여부코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_CHG_RSTRTN_DAY_NUM",
+        "COLUMN_COMMENTS": "상품변경제한일수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "PROD_INDC_CHAGE",
+        "COLUMN_COMMENTS": "상품표시요금",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "SVC_DIV_PROD_REL_CD",
+        "COLUMN_COMMENTS": "서비스구분상품관계코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "WLESS_MODEM_PROD_POSBL_YN",
+        "COLUMN_COMMENTS": "무선모뎀상품가능여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMT_RAT_SHAP_CD",
+        "COLUMN_COMMENTS": "정액과금형태코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LMSMPY_TARIF_YN",
+        "COLUMN_COMMENTS": "일시불요율여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FREE_GIFT_DUPL_POSBL_YN",
+        "COLUMN_COMMENTS": "무료선물중복가능여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_TMDF_TGT_YN",
+        "COLUMN_COMMENTS": "상품해지방어대상여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MLG_APLY_TYPE_CD",
+        "COLUMN_COMMENTS": "마일리지적용유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SBSC_TRMN_DAMON_IF_YN",
+        "COLUMN_COMMENTS": "가입해지데몬인터페이스여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "OTCOM_SALE_CMPN_ID",
+        "COLUMN_COMMENTS": "타사판매회사아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_ADM_TYPE_CD",
+        "COLUMN_COMMENTS": "상품관리유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_LCTG_DIV_CD",
+        "COLUMN_COMMENTS": "상품대분류구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_SCTG_DIV_CD",
+        "COLUMN_COMMENTS": "상품소분류구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DISP_USG_PROD_LCTG_CD",
+        "COLUMN_COMMENTS": "디스플레이용상품대분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DISP_USG_PROD_SCTG_CD",
+        "COLUMN_COMMENTS": "디스플레이용상품소분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHG_PROD_CHAGE_APLY_CD",
+        "COLUMN_COMMENTS": "변경상품요금적용코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_CHG_DUE_TYPE_CD",
+        "COLUMN_COMMENTS": "상품변경기한유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_PROD_DIV_CD",
+        "COLUMN_COMMENTS": "청구상품구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BILL_CONT_CALSUM_TYPE_CD",
+        "COLUMN_COMMENTS": "청구계약합산유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PREPAY_TYPE_CD",
+        "COLUMN_COMMENTS": "선납유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NIC_CD",
+        "COLUMN_COMMENTS": "NIC코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "VIRTL_PROD_CTG_CD",
+        "COLUMN_COMMENTS": "가상상품분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_GROUP_CTG_CD",
+        "COLUMN_COMMENTS": "상품그룹분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BNDL_PROD_COMPOSI_YN",
+        "COLUMN_COMMENTS": "번들상품구성여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACRND_MARK_RMARK_SBST",
+        "COLUMN_COMMENTS": "청구서표기비고내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ANYTM_BILL_DIV_CD",
+        "COLUMN_COMMENTS": "수시청구구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "HDAY_SETS_CD",
+        "COLUMN_COMMENTS": "공휴일세트코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PERD_SETS_CD",
+        "COLUMN_COMMENTS": "기간세트코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ASIGN_TIMEZN_APLY_BASE_CD",
+        "COLUMN_COMMENTS": "지정시간대적용기준코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ROAM_METH_TYPE_CD",
+        "COLUMN_COMMENTS": "로밍방법유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ICC_CHAGE_IMPS_YN",
+        "COLUMN_COMMENTS": "ICC요금부과여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_APLY_SCOPE_CD",
+        "COLUMN_COMMENTS": "상품적용범위코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_PREF_RANK",
+        "COLUMN_COMMENTS": "상품우선순위",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "RAT_PROD_YN",
+        "COLUMN_COMMENTS": "과금상품여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NFL_CHG_CONS_COMND_LNK_YN",
+        "COLUMN_COMMENTS": "명의변경공사명령연계여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CONS_COMND_TRT_DIV_CD",
+        "COLUMN_COMMENTS": "공사명령처리구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NEOSS_OPN_ADR_EXIST_YN",
+        "COLUMN_COMMENTS": "NEOSS개통주소존재여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "WRK_ODER_SND_TBL_NM",
+        "COLUMN_COMMENTS": "작업오더송신테이블명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "WRK_ODER_RCV_TBL_NM",
+        "COLUMN_COMMENTS": "작업오더수신테이블명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "OSS_PROD_IF_NO",
+        "COLUMN_COMMENTS": "OSS상품인터페이스번호",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TLK_RGN_APLY_DIV_CD",
+        "COLUMN_COMMENTS": "통화지역적용구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FRS_APD_TYPE_VAL",
+        "COLUMN_COMMENTS": "정액제추가유형값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "APD_FRS_SBST",
+        "COLUMN_COMMENTS": "추가정액제내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AGNCY_PRVD_AMT_DIV_CD",
+        "COLUMN_COMMENTS": "대리점지급금액구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "IF_YN",
+        "COLUMN_COMMENTS": "인터페이스여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RTIME_RAT_EQUIP_SBST",
+        "COLUMN_COMMENTS": "실시간과금장비내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NCG_TRT_METH_CD",
+        "COLUMN_COMMENTS": "명의변경처리방법코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACPT_OFC_FRMTN_BASE_DIV_CD",
+        "COLUMN_COMMENTS": "수용국편성기준구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TEL_NO_CONN_SHAP_CD",
+        "COLUMN_COMMENTS": "전화번호접속형태코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "LEAS_CIRCUIT_CONN_SHAP_CD",
+        "COLUMN_COMMENTS": "전용회선접속형태코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_DESC_SBST",
+        "COLUMN_COMMENTS": "상품설명내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_ID",
+        "COLUMN_COMMENTS": "상품아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_EFCT_ST_DT",
+        "COLUMN_COMMENTS": "상품유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PROD_EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "상품유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PROD_NM",
+        "COLUMN_COMMENTS": "상품명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DISP_PROD_HNGL_NM",
+        "COLUMN_COMMENTS": "디스플레이상품한글명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_ENGL_NM",
+        "COLUMN_COMMENTS": "상품영어명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_HNGL_ABBR_NM",
+        "COLUMN_COMMENTS": "상품한글약어명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_ENG_ABBR_NM",
+        "COLUMN_COMMENTS": "상품영문약어명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_3G_NM",
+        "COLUMN_COMMENTS": "상품3G명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_3G_ABBR_NM",
+        "COLUMN_COMMENTS": "상품3G약어명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_TYPE_CD",
+        "COLUMN_COMMENTS": "상품유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_PTCL_TYPE_CD",
+        "COLUMN_COMMENTS": "상품세부유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_LOB_CD",
+        "COLUMN_COMMENTS": "상품LOB코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "DTL_PROD_LOB_CD",
+        "COLUMN_COMMENTS": "상세상품LOB코드",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "PR_PROD_LOB_CD",
+    "TABLE_COMMENTS": "상품LOB코드",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "PROD_LOB_CD",
+        "COLUMN_COMMENTS": "상품LOB코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DT",
+        "COLUMN_COMMENTS": "유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PROD_LOB_NM",
+        "COLUMN_COMMENTS": "상품LOB명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UP_PROD_LOB_CD",
+        "COLUMN_COMMENTS": "상위상품LOB코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "GROTH_PROD_YN",
+        "COLUMN_COMMENTS": "성장상품여부",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "PR_PROD_REL",
+    "TABLE_COMMENTS": "상품관계",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "BNDL_PROD_COMPOSI_CASCNT",
+        "COLUMN_COMMENTS": "번들상품구성건수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "PROD_REL_CRRL_PROD_TYPE_CD",
+        "COLUMN_COMMENTS": "상품관계연관상품유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CRRL_PROD_ID",
+        "COLUMN_COMMENTS": "연관상품아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "BASE_PROD_ID",
+        "COLUMN_COMMENTS": "기준상품아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TGT_PROD_ID",
+        "COLUMN_COMMENTS": "대상상품아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PROD_REL_TYPE_CD",
+        "COLUMN_COMMENTS": "상품관계유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DT",
+        "COLUMN_COMMENTS": "유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "PROD_PREF_RANK",
+        "COLUMN_COMMENTS": "상품우선순위",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "PROD_REL_TYPE_DTL_CD",
+        "COLUMN_COMMENTS": "상품관계유형상세코드",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "PR_PROD_UNIT_SVC_REL",
+    "TABLE_COMMENTS": "상품단위서비스관계, 유닛 서비스 단위 아이디",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "PROD_ID",
+        "COLUMN_COMMENTS": "상품아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_ID",
+        "COLUMN_COMMENTS": "단위서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EFCT_ST_DT",
+        "COLUMN_COMMENTS": "유효시작일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "EFCT_FNS_DT",
+        "COLUMN_COMMENTS": "유효종료일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "COMPOSI_REL_MAND_SEL_DIV_CD",
+        "COLUMN_COMMENTS": "구성관계필수선택구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CUST_SEL_POSBL_YN",
+        "COLUMN_COMMENTS": "고객선택가능여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "REP_UNIT_SVC_YN",
+        "COLUMN_COMMENTS": "대표단위서비스여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PARAM_CNT",
+        "COLUMN_COMMENTS": "파라미터개수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "LMSMPY_TARIF_YN",
+        "COLUMN_COMMENTS": "일시불요율여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMT_TARIF_YN",
+        "COLUMN_COMMENTS": "정액요율여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ADTN_TARIF_YN",
+        "COLUMN_COMMENTS": "부가요율여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMT_CHAGE_IMPS_METH_TYPE_CD",
+        "COLUMN_COMMENTS": "정액요금부과방법유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMT_CHAGE_USE_QNT_APLY_CD",
+        "COLUMN_COMMENTS": "정액요금사용량적용코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMT_CHAGE_APLY_UNIT_CD",
+        "COLUMN_COMMENTS": "정액요금적용단위코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMT_CHAGE_LVL_CD",
+        "COLUMN_COMMENTS": "정액요금레벨코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "USE_TARIF_YN",
+        "COLUMN_COMMENTS": "사용요율여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "EARY_FNS_PENLT_TYPE_CD",
+        "COLUMN_COMMENTS": "조기종료위약금유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "FAMT_CHAGE_RMNY_FREQ_NUM",
+        "COLUMN_COMMENTS": "정액요금수납빈도수",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "FAMT_CHAGE_IMPS_LVL_CD",
+        "COLUMN_COMMENTS": "정액요금부과레벨코드",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  },
+  {
+    "OWNER": "CDMOWN",
+    "TABLE_NAME": "PR_UNIT_SVC_BAS",
+    "TABLE_COMMENTS": "단위서비스기본",
+    "COLUMNS": [
+      {
+        "COLUMN_NAME": "UNIT_SVC_ID",
+        "COLUMN_COMMENTS": "단위서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRTR_ID",
+        "COLUMN_COMMENTS": "시스템처리자아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_TRT_ORG_ID",
+        "COLUMN_COMMENTS": "시스템처리조직아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_SVC_ID",
+        "COLUMN_COMMENTS": "시스템서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_COMP_ID",
+        "COLUMN_COMMENTS": "시스템컴포넌트아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CRET_DT",
+        "COLUMN_COMMENTS": "시스템레코드생성일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "SYS_RECD_CHG_DT",
+        "COLUMN_COMMENTS": "시스템레코드변경일시",
+        "DATA_TYPE": "DATE"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_HNGL_NM",
+        "COLUMN_COMMENTS": "단위서비스한글명",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_TYPE_CD",
+        "COLUMN_COMMENTS": "단위서비스유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SWTC_IF_YN",
+        "COLUMN_COMMENTS": "스위치인터페이스여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SWTC_IF_VAL",
+        "COLUMN_COMMENTS": "스위치인터페이스값",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "SWTC_PARAM_SBST",
+        "COLUMN_COMMENTS": "스위치파라미터내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PARAM01_CRET_YN",
+        "COLUMN_COMMENTS": "파라미터01생성여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PARAM02_CRET_YN",
+        "COLUMN_COMMENTS": "파라미터02생성여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PARAM_AMD_POSBL_TYPE_CD",
+        "COLUMN_COMMENTS": "파라미터수정가능유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ADTN01_CRET_YN",
+        "COLUMN_COMMENTS": "부가01생성여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ADTN02_CRET_YN",
+        "COLUMN_COMMENTS": "부가02생성여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PARAM_INPUT_MAND_TYPE_CD",
+        "COLUMN_COMMENTS": "파라미터입력필수유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "PARAM_WNDW_ID",
+        "COLUMN_COMMENTS": "파라미터윈도우아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "NO_CNCT_UNIT_SVC_YN",
+        "COLUMN_COMMENTS": "번호연결단위서비스여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_TLK_CHAGE_APLY_DTL_CD",
+        "COLUMN_COMMENTS": "단위서비스통화요금적용상세코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_CTG_CD",
+        "COLUMN_COMMENTS": "단위서비스분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_DTL_CTG_CD",
+        "COLUMN_COMMENTS": "단위서비스상세분류코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_PRV_SHAP_CD",
+        "COLUMN_COMMENTS": "단위서비스제공형태코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MPS_UNIT_SVC_ID",
+        "COLUMN_COMMENTS": "MPS단위서비스아이디",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "MPS_TARIF_PREF_RANK",
+        "COLUMN_COMMENTS": "MPS요율우선순위",
+        "DATA_TYPE": "NUMBER"
+      },
+      {
+        "COLUMN_NAME": "FREE_TLK_TYPE_CD",
+        "COLUMN_COMMENTS": "무료통화유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "TLK_CHAGE_APLY_TYPE_CD",
+        "COLUMN_COMMENTS": "통화요금적용유형코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "HNDSET_PRICE_GROUP_CD",
+        "COLUMN_COMMENTS": "단말기대금그룹코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "HNDSET_PRICE_DTL_SBST",
+        "COLUMN_COMMENTS": "단말기대금상세내용",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "UNIT_SVC_LVL_CD",
+        "COLUMN_COMMENTS": "단위서비스레벨코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ASBYDAY_APLY_CD",
+        "COLUMN_COMMENTS": "일할적용코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "RGN_SCOPE_ASC_YN",
+        "COLUMN_COMMENTS": "지역범위관련여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHAGE_EXEMP_LVL_CD",
+        "COLUMN_COMMENTS": "요금면제레벨코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "CHAGE_EXEMP_METH_CD",
+        "COLUMN_COMMENTS": "요금면제방법코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "POPUP_PREV_CALL_YN",
+        "COLUMN_COMMENTS": "팝업선호출여부",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "ACTCOST_TGT_DIV_CD",
+        "COLUMN_COMMENTS": "실비대상구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "COMPIO_DIV_CD",
+        "COLUMN_COMMENTS": "사내외구분코드",
+        "DATA_TYPE": "VARCHAR2"
+      },
+      {
+        "COLUMN_NAME": "AGNCY_RMNY_ITEM_CD",
+        "COLUMN_COMMENTS": "대리점수납항목아이디",
+        "DATA_TYPE": "VARCHAR2"
+      }
+    ]
+  }
+]
